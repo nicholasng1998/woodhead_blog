@@ -16,8 +16,10 @@ export class HeaderComponent implements OnInit {
 
   navigating(){
     this.showSpinner = true;
+    document.body.style.opacity = '0.5';
     setTimeout(() =>{
       this.showSpinner = false;
-    }, 2000);
+      document.body.style.opacity = '1';
+    }, 1000);
   }
 }
