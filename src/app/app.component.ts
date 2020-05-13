@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Event, Router, ActivatedRoute, NavigationStart, NavigationEnd} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,18 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  showSpinner = true;
   title = 'WoodHead';
+  constructor(private router: Router){
+    this.router.events.subscribe((routerEvent: Event) => {
+      if(routerEvent instanceof NavigationStart){
+        this.showSpinner = true;
+      }
+      if(routerEvent instanceof NavigationEnd){
+        this.showSpinner = false;
+      }
+
+    })
+  }
+
 }

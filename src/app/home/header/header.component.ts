@@ -15,11 +15,12 @@ export class HeaderComponent implements OnInit {
   }
 
   navigating(){
-    this.showSpinner = true;
-    document.body.style.opacity = '0.5';
-    setTimeout(() =>{
-      this.showSpinner = false;
-      document.body.style.opacity = '1';
-    }, 1000);
+    console.log(this.showSpinner);
+    // this.showSpinner = true;
+    // document.body.style.opacity = '0.5';
+    // setTimeout(() =>{
+    //   this.showSpinner = false;
+    //   document.body.style.opacity = '1';
+    // }, 1000);
   }
 }
