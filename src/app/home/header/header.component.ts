@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   navigating(){
-    console.log(this.showSpinner);
+    console.log("Hello Developer!!");
     // this.showSpinner = true;
     // document.body.style.opacity = '0.5';
     // setTimeout(() =>{

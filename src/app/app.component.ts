@@ -15,10 +15,11 @@ export class AppComponent {
         this.showSpinner = true;
       }
       if(routerEvent instanceof NavigationEnd){
-        this.showSpinner = false;
+        setTimeout(() => {
+          this.showSpinner = false;
+        }, 500);
       }
-
-    })
+    });
   }
 
 }
